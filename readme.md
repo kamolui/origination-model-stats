@@ -1,6 +1,6 @@
 # Propuesta de Proyecto Final: Detección de Drift en Modelos de Crédito
 
-*Nov 11, 2026 · @Luis Enrique Patiño @Jesus Aramando Rufino* 
+*Nov 11, 2026 · @Luis Enrique Patiño @Jesus Armando Rufino* 
 
 ---
 
@@ -182,7 +182,7 @@ Cada técnica del curso responde a una parte de la pregunta:
 | 1 | Mar 24 | Acordar ventanas (años o trimestres), variables, y qué datos se reservan para los escenarios (paso 4 de la metodología). Crear repo y ambiente compartido. | Ambos | n/a | Decisiones por escrito | - |
 | 2 | Mar 24 | Descargar Lending Club, filtrar préstamos con resultado final, definir incumplimiento y crear las ventanas. | Jesús | 1 | Dataset limpio | • Generar 3 archivos nuevos para no correr la limpieza siempre (train, test, val)<br>• Generar variable objetivo y features (numéricas)<br>• Si hay variables categóricas transformar en numéricas: https://www.kdnuggets.com/2021/05/deal-with-categorical-data-machine-learning.html |
 | 3 | Mar 24 | Programar funciones de PSI (con número de bins configurable) y KS, probándolas con datos sintéticos. | Luis | 2 | Módulo de drift | **Completado:** Implementado en `src/drift/metrics_computation.py` con Polars. Pruebas sintéticas en `tests/test_drift.py`. |
-| 4 | Mié 25 | Estadística descriptiva: observaciones y tasa de incumplimiento por ventana. | Jesús | 2 | Tablas y gráficas | • x3 meses<br>• Gráfica barra histograma<br>• violin plot |
+| 4 | Mié 25 | Estadística descriptiva: observaciones y tasa de incumplimiento por ventana. | Jesús | 2 | Tablas y gráficas | • x1 mes<br>• Gráfica barra histograma<br>• violin plot |
 | 5 | Mié 25 | Bootstrap de PSI y KS en la ventana de referencia (validation), con intervalos de confianza. | Luis | 2, 3 | Distribuciones nulas | Usar validation para comparar resultados |
 | 6 | Jue 26 | Jackknife del sesgo y la varianza del PSI según tamaño de muestra y bins. | Luis | 2, 3 | Tabla de sesgo y varianza | - |
 | 7 | Jue 26 | Modelo Beta-Binomial: P(θ₂ > θ₁ \| datos) entre ventanas. | Jesús | 4 | Probabilidades por ventana | k=tasa incum |
